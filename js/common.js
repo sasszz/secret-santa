@@ -8,7 +8,7 @@
   SS.QUESTIONS = [
     { k: "likes",    label: "Things I love",              hint: "Hobbies, colors, activities. Start typing, then tap a suggestion or press Enter", type: "tags", suggest: "LIKES", placeholder: "e.g. hiking, cats, green" },
     { k: "brands",   label: "Favorite brands and stores", hint: "Start typing, then tap a suggestion or press Enter", type: "tags", suggest: "BRANDS", placeholder: "e.g. Lego, Sephora, Patagonia" },
-    { k: "treats",   label: "Favorite snacks and drinks", hint: "" },
+    { k: "treats",   label: "Favorite foods, snacks and food brands", hint: "Drinks too. Start typing, then tap a suggestion or press Enter", type: "tags", suggest: "FOODS", placeholder: "e.g. dark chocolate, Takis, chai" },
     { k: "wishlist", label: "Wishlist ideas or links",    hint: "Be specific!" },
     { k: "sizes",    label: "Clothes and sizes",          hint: "", type: "sizes" },
     { k: "avoid",    label: "Please don't get me",        hint: "Allergies, things I already have, pet peeves" },
@@ -59,8 +59,6 @@
     "Perfume", "Candles", "Cozy blankets", "Home decor", "Self-care", "Spa days", "Meditation", "Bath bombs",
     // Animals and nature
     "Dogs", "Cats", "Horses", "Birds", "Birdwatching", "Nature", "Flowers", "Mountains", "The ocean", "Sustainability",
-    // Food
-    "Chocolate", "Candy", "Spicy food", "Hot sauce", "Cheese", "Sushi", "Pizza", "Pasta", "Tacos", "Ramen", "Desserts",
     // Colors
     "Red", "Pink", "Orange", "Yellow", "Green", "Blue", "Navy", "Purple", "Black", "White", "Gray", "Neutrals",
     "Pastels", "Earth tones", "Gold", "Silver"
@@ -84,11 +82,40 @@
     // Tech and games
     "Apple", "Samsung", "Google", "Sony", "Nintendo", "PlayStation", "Xbox", "Steam", "Bose", "JBL", "Kindle", "Lego",
     "Funko", "Pokémon", "Disney", "Marvel", "Star Wars", "Harry Potter", "Barnes & Noble",
-    // Food and treats
-    "Trader Joe's", "Whole Foods", "Ghirardelli", "Lindt", "Godiva", "See's Candies", "Haribo", "Ferrero Rocher",
     // Gifts and accessories
     "Etsy", "Amazon", "Kendra Scott", "Pandora", "Mejuri", "Fossil", "Ray-Ban", "Kate Spade", "Coach", "Fjällräven",
     "Herschel", "Away", "Anthropologie Home", "Jellycat", "Squishmallows"
+  ];
+
+  // Suggestions for the "Favorite foods, snacks and food brands" tag field.
+  SS.FOODS = [
+    // Sweets
+    "Chocolate", "Dark chocolate", "Milk chocolate", "White chocolate", "Candy", "Sour candy", "Gummy bears", "Licorice",
+    "Caramels", "Toffee", "Fudge", "Peppermint bark", "Candy canes", "Marshmallows", "Cookies", "Shortbread",
+    "Gingerbread", "Macarons", "Brownies", "Cake", "Cupcakes", "Donuts", "Pastries", "Croissants", "Pie", "Cheesecake",
+    "Ice cream", "Honey", "Maple syrup", "Nutella", "Peanut butter", "Jam",
+    // Savory snacks
+    "Chips", "Spicy chips", "Popcorn", "Pretzels", "Crackers", "Nuts", "Pistachios", "Almonds", "Cashews", "Trail mix",
+    "Beef jerky", "Cheese", "Charcuterie", "Olives", "Pickles", "Hot sauce", "Spicy food", "Salsa", "Hummus",
+    "Seaweed snacks", "Dried fruit", "Granola", "Protein bars",
+    // Meals and cuisines
+    "Pizza", "Pasta", "Sushi", "Ramen", "Tacos", "Burgers", "BBQ", "Curry", "Thai food", "Indian food", "Mexican food",
+    "Italian food", "Korean food", "Japanese food", "Chinese food", "Vegan food", "Vegetarian food", "Gluten-free",
+    "Breakfast food", "Brunch", "Fresh fruit",
+    // Drinks
+    "Coffee", "Espresso", "Cold brew", "Tea", "Green tea", "Matcha", "Chai", "Herbal tea", "Hot chocolate", "Kombucha",
+    "Sparkling water", "Soda", "Energy drinks", "Smoothies", "Juice", "Wine", "Red wine", "White wine", "Champagne",
+    "Beer", "Craft beer", "Cider", "Whiskey", "Bourbon", "Gin", "Tequila", "Rum", "Cocktails", "Mocktails",
+    // Food brands and shops
+    "Lindt", "Ghirardelli", "Godiva", "Ferrero Rocher", "Toblerone", "Cadbury", "Hershey's", "Reese's", "M&M's",
+    "Kit Kat", "Snickers", "Twix", "See's Candies", "Russell Stover", "Harry & David", "Haribo", "Sour Patch Kids",
+    "Skittles", "Starburst", "Jelly Belly", "Swedish Fish", "Trolli", "Oreo", "Pepperidge Farm", "Biscoff",
+    "Tate's Bake Shop", "Crumbl", "Insomnia Cookies", "Krispy Kreme", "Takis", "Doritos", "Cheetos", "Pringles",
+    "Lay's", "Kettle Brand", "Goldfish", "Cheez-It", "Ritz", "Pop-Tarts", "Hot Pockets", "Annie's", "KIND",
+    "RXBAR", "Clif Bar", "Ben & Jerry's", "Häagen-Dazs", "Jeni's", "Trader Joe's", "Whole Foods", "Costco",
+    "Starbucks", "Dunkin'", "Peet's", "Blue Bottle", "Lavazza", "Illy", "Nespresso", "Teavana", "Harney & Sons",
+    "Celestial Seasonings", "Yogi Tea", "Twinings", "Coca-Cola", "Diet Coke", "Pepsi", "Dr Pepper", "LaCroix",
+    "Liquid Death", "Celsius", "Red Bull", "Olipop", "Poppi", "Chick-fil-A", "Chipotle", "Panera", "Shake Shack"
   ];
 
   SS.$ = (sel) => document.querySelector(sel);
