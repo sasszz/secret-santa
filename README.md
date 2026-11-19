@@ -22,14 +22,6 @@ To change the questions, edit `QUESTIONS` at the top of `js/common.js`. Every pa
 
 The scripts are plain `<script>` files, not ES modules, so the site also works if you open `index.html` straight from your computer.
 
-## Put it on GitHub Pages
-
-1. Create a new public repo on GitHub, for example `secret-santa`.
-2. Upload everything in this folder, keeping the `css` and `js` folders (Add file > Upload files, then drag the whole folder in).
-3. Go to Settings > Pages.
-4. Under "Build and deployment", set Source to "Deploy from a branch", branch `main`, folder `/ (root)`. Save.
-5. After a minute your site is live at `https://YOUR-USERNAME.github.io/secret-santa/`.
-
 ## How to run your exchange
 
 1. Open **organize.html**. Fill in the event name, budget and date.
