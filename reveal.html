@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Secret Santa Match</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <span class="eyebrow" id="rv-event">Secret Santa</span>
+    <h1 id="rv-hello">Hi!</h1>
+    <p class="lede">Make sure no one is looking at your screen.</p>
+  </header>
+
+  <div class="row"><button class="btn big fit" id="rv-btn">Reveal my person</button></div>
+
+  <div class="block reveal" id="rv-card" hidden>
+    <span class="tag">You're getting a gift for</span>
+    <div class="receiver" id="rv-name"></div>
+    <div class="facts" id="rv-facts"></div>
+    <dl class="answers" id="rv-answers"></dl>
+  </div>
+
+  <p class="error" id="rv-error" hidden>This link looks broken. Ask your organizer to send it again.</p>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/reveal.js"></script>
+</body>
+</html>

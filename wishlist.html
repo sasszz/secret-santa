@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Secret Santa Wishlist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <span class="eyebrow">Your wishlist</span>
+    <h1>Help your Secret Santa</h1>
+    <p class="lede">Answer what you like and skip the rest. When you're done, you'll get a code to send to the organizer.</p>
+  </header>
+
+  <section class="panel">
+    <div class="block" id="wish-form">
+      <label>Your name <input type="text" id="wish-name" autocomplete="name"></label>
+      <div class="fields" id="wish-fields"></div>
+      <div class="row"><button class="btn primary fit" id="wish-make">Create my code</button></div>
+      <p class="error" id="wish-error" hidden></p>
+    </div>
+
+    <div class="block" id="wish-result" hidden>
+      <h3>Send this code to your organizer</h3>
+      <p class="hint">Tap Email or Text to open a message with your code already in it, or copy it yourself. It contains only what you typed above.</p>
+      <textarea class="code" id="wish-code" readonly rows="4"></textarea>
+      <div class="row">
+        <a class="btn primary fit" id="wish-email" href="mailto:">Email it</a>
+        <a class="btn primary fit" id="wish-text" href="sms:">Text it</a>
+        <button class="btn fit" id="wish-copy">Copy code</button>
+      </div>
+      <div class="row"><button class="btn fit" id="wish-edit">Edit my wishlist</button></div>
+    </div>
+  </section>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/wishlist.js"></script>
+</body>
+</html>

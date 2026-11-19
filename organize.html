@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Secret Santa Organizer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="wrap">
+  <nav class="topnav">
+    <a href="index.html">← Secret Santa Draw</a>
+    <span class="sep">|</span>
+    <a href="wishlist.html">Wishlist page</a>
+  </nav>
+
+  <header>
+    <span class="eyebrow" id="event-eyebrow">Gift exchange</span>
+    <h1>Organize</h1>
+    <p class="lede">Your list saves in this browser. Come back on the same device to pick up where you left off.</p>
+  </header>
+
+  <section class="panel">
+    <!-- 1. Event -->
+    <div class="block">
+      <div class="block-head"><span class="step">1</span><h2>Event details</h2></div>
+      <div class="row">
+        <label>Event name <input type="text" id="ev-name" placeholder="Office Secret Santa 2026"></label>
+      </div>
+      <div class="row">
+        <label>Budget <input type="text" id="ev-budget" placeholder="$30"></label>
+        <label>Exchange date <input type="date" id="ev-date"></label>
+      </div>
+      <div class="row">
+        <button class="btn fit" id="copy-form-link">Copy wishlist link for participants</button>
+      </div>
+    </div>
+
+    <!-- 2. People -->
+    <div class="block">
+      <div class="block-head"><span class="step">2</span><h2>People</h2></div>
+      <div class="row">
+        <label>Name <input type="text" id="add-name" placeholder="Add a name"></label>
+        <button class="btn primary fit" id="add-person">Add</button>
+      </div>
+      <label>Paste a wishlist code <small>Adds the person, or updates them if the name already exists. You can paste several at once.</small>
+        <textarea class="code" id="import-code" rows="2" placeholder="SS1:..."></textarea>
+      </label>
+      <div class="row"><button class="btn fit" id="import-btn">Add from code</button></div>
+      <p class="error" id="people-error" hidden></p>
+      <ul class="list" id="people-list"></ul>
+    </div>
+
+    <!-- 3. Rules -->
+    <div class="block">
+      <div class="block-head"><span class="step">3</span><h2>Rules</h2></div>
+      <p class="hint">Keep couples, roommates or last year's pairs apart.</p>
+      <div class="row">
+        <label>This person <select id="ex-a"></select></label>
+        <label>can't draw <select id="ex-b"></select></label>
+      </div>
+      <div class="row">
+        <label class="check"><input type="checkbox" id="ex-both" checked> Both ways</label>
+        <button class="btn primary fit" id="ex-add">Add rule</button>
+      </div>
+      <ul class="list" id="ex-list"></ul>
+      <label class="check"><input type="checkbox" id="no-swaps" checked> Avoid two people drawing each other</label>
+    </div>
+
+    <!-- 4. Draw -->
+    <div class="block">
+      <div class="block-head"><span class="step">4</span><h2>Draw</h2></div>
+      <div class="row"><button class="btn big fit" id="draw-btn">Draw names</button></div>
+      <p class="error" id="draw-error" hidden></p>
+      <div id="results" class="fields" hidden>
+        <p class="notice">Send each person only their own link. Drawing again replaces every match, so old links will show old results.</p>
+        <label class="check"><input type="checkbox" id="show-matches"> Show matches to me (spoils it if you're playing)</label>
+        <ul class="list" id="result-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>Links hold the match in scrambled text, which hides it from a glance but isn't encryption.</footer>
+</main>
+
+<script src="js/common.js"></script>
+<script src="js/draw.js"></script>
+<script src="js/organize.js"></script>
+</body>
+</html>
